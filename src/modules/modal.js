@@ -1,13 +1,29 @@
+import { animate } from "./helpers"
 const modal = () => {
 	const header = document.querySelector('.header')
 	const modalOverlay = document.querySelector('.modal-overlay')
 	const modalCallback = document.querySelector('.modal-callback')
-	const modalClose = document.querySelector('.modal-close')
+	const width = document.documentElement.clientWidth
 
 	header.addEventListener('click', (e) => {
 		if (e.target.classList.contains('fancyboxModal')) {
-			modalCallback.style.display = 'block'
-			modalOverlay.style.display = 'block'
+			if (width >= 768) {
+				animate({
+					duration: 1000,
+					timing(timeFraction) {
+						return timeFraction;
+					},
+					draw(progress) {
+						modalCallback.style.opacity = progress
+						modalCallback.style.display = 'block'
+						modalOverlay.style.display = 'block'
+					}
+				});
+			}
+			else {
+				modalCallback.style.display = 'block'
+				modalOverlay.style.display = 'block'
+			}
 		}
 	})
 
