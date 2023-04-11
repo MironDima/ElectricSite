@@ -1,5 +1,6 @@
 import  modal  from "./modules/modal";
-import { two } from "./modules/two";
+import scroll from './modules/scroll'
+
 
 modal()
-two()
+scroll()
