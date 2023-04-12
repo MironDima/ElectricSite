@@ -856,6 +856,10 @@ hr.white {
 	overflow: hidden;
 	height: 450px;
 	position: relative;
+
+
+
+
 }
 .top-slider .item:before {
 	content: "";
@@ -931,6 +935,11 @@ video#video_background {
 	.top-slider {
 		height: 520px;
 	}
+
+
+
+
+	
 	.top-slider .table {
 		opacity: 0;
 		visibility: hidden;

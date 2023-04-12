@@ -3,10 +3,13 @@ const scroll = () => {
 	linkMenu.forEach(link => {
 		link.addEventListener('click', (e) => {
 			e.preventDefault()
-			const hrefLink = link.getAttribute('href').substring(1)
-			document.getElementById(hrefLink).scrollIntoView({
+			const hrefLink = link.getAttribute('href')
+			const fixedHeigthBlock = 100;
+			const top = document.querySelector('' + hrefLink).offsetTop - fixedHeigthBlock;
+			window.scrollTo({
+				top,
+				left: 0,
 				behavior: 'smooth',
-				block: 'start'
 			})
 		})
 	})
