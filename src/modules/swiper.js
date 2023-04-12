@@ -1,6 +1,5 @@
 import Swiper, { Pagination, Autoplay } from 'swiper';
 const swiper = () => {
-
 	const swiper = new Swiper('.swiper', {
 		modules: [Pagination, Autoplay],
 		loop: true,

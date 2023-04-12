@@ -824,12 +824,15 @@ hr.white {
 	}
 	h1.big,
 	.title-h1.big {
-		font-size: 80px;
+		font-size: 40px;
 		line-height: 1;
 		margin-bottom: 50px;
+		color: rgb(230, 208, 15);
 	}
 	.top-slider .text {
-		font-size: 18px;
+		font-size: 15px;
+		color: rgb(255, 255, 255);
+		font-weight: 800;
 		line-height: 1.6;
 	}
 	.top-menu > ul > li > a {
@@ -843,7 +846,7 @@ hr.white {
 	bottom: 25px;
 }
 .top-slider .slick-dots li {
-	border-color: #fff !important;
+	border-color: rgb(184, 224, 3) !important;
 }
 .top-slider .slick-dots li.slick-active {
 	background-color: #fff !important;
@@ -856,11 +859,8 @@ hr.white {
 	overflow: hidden;
 	height: 450px;
 	position: relative;
-
-
-
-
 }
+
 .top-slider .item:before {
 	content: "";
 	display: block;
@@ -936,13 +936,9 @@ video#video_background {
 		height: 520px;
 	}
 
-
-
-
-	
 	.top-slider .table {
-		opacity: 0;
-		visibility: hidden;
+		opacity: 1;
+		visibility: visible ;
 		-webkit-transform: scale(1.5);
 		-ms-transform: scale(1.5);
 		-o-transform: scale(1.5);
@@ -963,7 +959,7 @@ video#video_background {
 
 @media only screen and (min-width: 1240px) {
 	.top-slider .text {
-		font-size: 24px;
+		font-size: 18px;
 		line-height: 1.6;
 	}
 }
