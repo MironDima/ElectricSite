@@ -1,7 +1,5 @@
 import Swiper, { Navigation } from 'swiper';
 const carusel = () => {
-	
-
 	const swiperCaresel = new Swiper('.services-elements', {
 		modules: [Navigation],
 		loop: true,
@@ -26,7 +24,6 @@ const carusel = () => {
 			}
 		}
 	});
-
 }
 
 export default carusel
