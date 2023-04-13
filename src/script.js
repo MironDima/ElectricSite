@@ -3,9 +3,11 @@ import scroll from './modules/scroll'
 import swiper from './modules/swiper'
 import carusel from './modules/carusel'
 import arrowUp from './modules/up'
+import accordion from './modules/accordion'
 
 arrowUp()
 modal()
 scroll()
 swiper()
 carusel()
+accordion()

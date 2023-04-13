@@ -10,7 +10,6 @@ const arrowUp = () => {
 	}
 	document.addEventListener('scroll', () => {
 		let scrollY = window.scrollY
-		console.log(scrollY);
 		if (scrollY > 450) {
 			showUp()
 		}
