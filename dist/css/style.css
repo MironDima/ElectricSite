@@ -1420,7 +1420,7 @@ video#video_background {
 	width: 70px;
 	height: 70px;
 	z-index: 300;
-	border: 4px solid #e9bb26;
+	border: 2px solid #e9bb26;
 	padding: 0 2px;
 	cursor: pointer;
 	background-color: rgba(0, 0, 0, 0.6);
