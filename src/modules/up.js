@@ -8,7 +8,6 @@ const arrowUp = () => {
 	const showUp = () => {
 		arrowUp.style.display = 'block'
 	}
-
 	document.addEventListener('scroll', () => {
 		let scrollY = window.scrollY
 		console.log(scrollY);
@@ -19,7 +18,6 @@ const arrowUp = () => {
 			hiddenUp()
 		}
 	})
-
 	arrowUp.addEventListener('click', () => {
 		window.scrollTo({
 			top: 0,
