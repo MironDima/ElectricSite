@@ -3,7 +3,7 @@
 
 <head>
 	<!-- PAGE TITLE -->
-	<title>Шаблон сайта электрика</title>
+	<title>Электрик24</title>
 
 	<!-- META-DATA -->
 	<meta charset="utf-8">
@@ -179,7 +179,7 @@
 				<div class="services-elements swiper">
 					<div class="row services-carousel swiper-wrapper">
 						<div class="col-sm-6 col-md-4 swiper-slide">
-							<div class="element relative">
+							<div class="element relative" id="info">
 								<a class="absolute fancyboxModal" href="#application"
 									data-application="Аварийный выезд"></a>
 								<div class="img-wrapper">
@@ -196,7 +196,7 @@
 							</div>
 						</div>
 						<div class="col-sm-6 col-md-4 swiper-slide">
-							<div class="element relative">
+							<div class="element relative" id="info">
 								<a class="absolute fancyboxModal" href="#application"
 									data-application="Монтаж или замена электропроводки"></a>
 								<div class="img-wrapper">
@@ -213,7 +213,7 @@
 							</div>
 						</div>
 						<div class="col-sm-6 col-md-4 swiper-slide">
-							<div class="element relative">
+							<div class="element relative" id="info">
 								<a class="absolute fancyboxModal" href="#application"
 									data-application="Ремонт, замена, перенос розеток"></a>
 								<div class="img-wrapper">
@@ -230,7 +230,7 @@
 							</div>
 						</div>
 						<div class="col-sm-6 col-md-4 swiper-slide">
-							<div class="element relative">
+							<div class="element relative" id="info">
 								<a class="absolute fancyboxModal" href="#application"
 									data-application="Замена электросчетчика"></a>
 								<div class="img-wrapper">
@@ -247,7 +247,7 @@
 							</div>
 						</div>
 						<div class="col-sm-6 col-md-4 swiper-slide">
-							<div class="element relative">
+							<div class="element relative" id="info">
 								<a class="absolute fancyboxModal" href="#application"
 									data-application="Установка, замена люстры"></a>
 								<div class="img-wrapper">
@@ -264,7 +264,7 @@
 							</div>
 						</div>
 						<div class="col-sm-6 col-md-4 swiper-slide">
-							<div class="element relative">
+							<div class="element relative" id="info">
 								<a class="absolute fancyboxModal" href="#application"
 									data-application="Установка светильников"></a>
 								<div class="img-wrapper">
@@ -536,7 +536,7 @@
 									деятельности способствует подготовки и реализации модели развития
 								</div>
 							</div>
-							
+
 							<div class="element">
 								<div class="title">
 									Даете ли вы гарантию и на сколько?
@@ -549,7 +549,6 @@
 									деятельности способствует подготовки и реализации модели развития
 								</div>
 							</div>
-							
 						</div>
 					</div>
 				</div>
@@ -655,7 +654,7 @@
 			<div class="title-h2">Мы перезвоним через 5 минут!</div>
 			<br />
 			<div class="rf">
-				<form action="" name="form-callback">
+				<form action="" name="form-callback" id="form">
 					<div class="form-group">
 						<input type="text" name="fio" class="form-control" placeholder="Ваше имя" />
 					</div>
@@ -663,6 +662,7 @@
 					<div class="form-group">
 						<input type="text" name="tel" class="form-control tel required" placeholder="Телефон*" />
 					</div>
+					<!-- <input name="services" value=""> -->
 					<p><span class="red">*</span> <span class="f12">- поля, обязательные для заполнения</span></p>
 					<div>
 						<input type="submit" class="button btn feedback" value="Отправить" />
@@ -740,6 +740,7 @@
 	<img src="images/32_chevron_up.svg" alt="up" class="up">
 	<!-- * * * * * * button to top: end * * * * * * -->
 
-	
+
 </body>
+
 </html>

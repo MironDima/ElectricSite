@@ -397,6 +397,32 @@ a.absolute {
 	background: #f02a29;
 }
 
+.style {
+	text-align: center;
+	font-weight: 600;
+	font-size: 20px;
+}
+
+.prelouder {
+	margin: auto;
+	margin-top: 10px;
+	width: 20px;
+	height: 20px;
+	background-color: rgba(35, 182, 235, 0);
+	display: flex;
+	align-items: center;
+}
+
+.prelouder img {
+	width: 100%;
+	height: 100%;
+}
+.hide-prelouder {
+	display: none;
+}
+
+
+
 /**************************************/
 .header-push {
 	height: 101px;
