@@ -1,5 +1,7 @@
 const sendForm = (formId) => {
 	const form = document.getElementById(formId);
+	const services = document.querySelectorAll('.absolute');
+	const hideInput = form.querySelector('[name="services"]')
 	const statusBlock = document.createElement('div');
 	statusBlock.classList.add('style')
 	const startLoad = 'Идет отправка...';
@@ -14,10 +16,14 @@ const sendForm = (formId) => {
 		inputs.forEach(input => {
 			if (input.name === "fio") {
 				if (input.value.length <= 2) {
+					input.style.border = '1px solid red'
+					input.style.color = 'red'
 					success = false;
 				}
 			} else if (input.name === "tel") {
 				if (input.value.length <= 9) {
+					input.style.border = '1px solid red'
+					input.style.color = 'red'
 					success = false;
 				}
 			}
@@ -35,29 +41,45 @@ const sendForm = (formId) => {
 		}).then(res => res.json());
 	}
 
+	services.forEach(service => {
+		service.addEventListener('click', (e) => {
+			const nameService = e.target.getAttribute('data-application');
+			hideInput.value = nameService
+		})
+	})
+
 	const submitForm = () => {
 		const inputs = form.querySelectorAll('[type="text"]');
-		console.log(inputs);
 		const formdata = new FormData(form);
 		const formBody = {}
 
-		form.append(prelouder)
+		form.append(prelouder);
 		setTimeout(() => {
-			prelouder.classList.add('hide-prelouder')
-		},1500)
+			prelouder.classList.add('hide-prelouder');
+		}, 1500)
 		form.append(statusBlock);
 
 		formdata.forEach((value, key) => {
 			formBody[key] = value
 		})
 
+		if (hideInput.value === '') {
+			delete formBody.services;
+
+		}
+
 		if (sendValidate(inputs)) {
 			sendData(formBody)
 				.then(data => {
 					inputs.forEach(input => {
+						input.addEventListener('input', () => {
+							input.style.color = ''
+						})
 						statusBlock.textContent = successLoad;
 						statusBlock.style.color = 'green';
-						input.value = ''
+						input.style.border = '';
+						input.value = '';
+						hideInput.value = '';
 						setTimeout(() => {
 							statusBlock.textContent = '';
 						}, 3000)
@@ -67,7 +89,6 @@ const sendForm = (formId) => {
 		} else {
 			statusBlock.style.color = 'red';
 			statusBlock.textContent = errorLoad;
-			alert('Данные не валидны!');
 		}
 	}
 
@@ -84,12 +105,3 @@ const sendForm = (formId) => {
 export default sendForm
 
 
-// const services = document.querySelectorAll('#info')
-		// console.log(services);
-
-		// services.forEach(service => {
-		// 	service.addEventListener('click', (e) => {
-		// 		e.stopPropagation()
-		// 		console.log(e.target);
-		// 	})
-		// })
