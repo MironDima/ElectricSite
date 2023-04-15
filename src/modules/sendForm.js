@@ -9,8 +9,6 @@ const sendForm = (formId) => {
 	prelouder.classList.add('prelouder')
 	prelouder.innerHTML = `<img src = images/prelouder.gif alt = "prelouder">`
 
-
-
 	const sendValidate = (inputs) => {
 		let success = true;
 		inputs.forEach(input => {

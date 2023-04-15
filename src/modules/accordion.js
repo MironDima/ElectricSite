@@ -1,23 +1,26 @@
 const accordion = () => {
-const accordionBlock = document.querySelector('.accordeon');
-const accordionElem = accordionBlock.querySelectorAll('.element');
-const accordionText = accordionBlock.querySelectorAll('.element-content');
+	const accordionBlock = document.querySelector('.accordeon');
+	const accordionElem = accordionBlock.querySelectorAll('.element');
+	const accordionText = accordionBlock.querySelectorAll('.element-content');
 
-accordionBlock.addEventListener('click',(e) => {
-	if(e.target.closest('.element')){
-		const newAccordion = e.target.closest('.element');
-		
-		accordionElem.forEach((accordion,index)=> {
-			if(accordion === newAccordion) {
-				accordion.classList.add('active');
-				accordionText[index].style.display = 'block'
+	accordionElem.forEach((accrodItem, accordIndex) => {
+		accrodItem.addEventListener('click', () => {
+			if (accrodItem.classList.contains('active')) {
+				accrodItem.classList.remove('active')
+				accordionText[accordIndex].style.display = 'none'
 			}
-			else{
-				accordion.classList.remove('active');
-				accordionText[index].style.display = 'none'
+			else {
+				accordionElem.forEach((accordion, index) => {
+					console.log(accordion);
+					if (accordion.classList.contains('active')) {
+						accordion.classList.remove('active')
+						accordionText[index].style.display = 'none'
+					}
+				})
+				accrodItem.classList.add('active')
+				accordionText[accordIndex].style.display = 'block'
 			}
 		})
-	}
-})
+	})
 }
 export default accordion
