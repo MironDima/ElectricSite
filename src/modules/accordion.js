@@ -11,7 +11,6 @@ const accordion = () => {
 			}
 			else {
 				accordionElem.forEach((accordion, index) => {
-					console.log(accordion);
 					if (accordion.classList.contains('active')) {
 						accordion.classList.remove('active');
 						accordionText[index].style.display = 'none';

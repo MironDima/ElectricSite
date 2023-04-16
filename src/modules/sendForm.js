@@ -1,29 +1,29 @@
 const sendForm = (formId) => {
 	const form = document.getElementById(formId);
 	const services = document.querySelectorAll('.absolute');
-	const hideInput = form.querySelector('[name="services"]')
+	const hideInput = form.querySelector('[name="services"]');
 	const statusBlock = document.createElement('div');
-	statusBlock.classList.add('style')
+	statusBlock.classList.add('style');
 	const startLoad = 'Идет отправка...';
 	const errorLoad = 'Ошибка..';
 	const successLoad = 'Отправлено!С вами свяжется наш специалист';
 	const prelouder = document.createElement('div')
 	prelouder.classList.add('prelouder')
-	prelouder.innerHTML = `<img src = images/prelouder.gif alt = "prelouder">`
+	prelouder.innerHTML = `<img src = images/prelouder.gif alt = "prelouder">`;
 
 	const sendValidate = (inputs) => {
 		let success = true;
 		inputs.forEach(input => {
 			if (input.name === "fio") {
 				if (input.value.length <= 2) {
-					input.style.border = '1px solid red'
-					input.style.color = 'red'
+					input.style.border = '1px solid red';
+					input.style.color = 'red';
 					success = false;
 				}
 			} else if (input.name === "tel") {
 				if (input.value.length <= 9) {
-					input.style.border = '1px solid red'
-					input.style.color = 'red'
+					input.style.border = '1px solid red';
+					input.style.color = 'red';
 					success = false;
 				}
 			}
@@ -44,7 +44,7 @@ const sendForm = (formId) => {
 	services.forEach(service => {
 		service.addEventListener('click', (e) => {
 			const nameService = e.target.getAttribute('data-application');
-			hideInput.value = nameService
+			hideInput.value = nameService;
 		})
 	})
 
