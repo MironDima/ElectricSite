@@ -5,9 +5,11 @@ const arrowUp = () => {
 		arrowUp.style.display = 'none'
 	}
 	hiddenUp()
+
 	const showUp = () => {
 		arrowUp.style.display = 'block'
 	}
+
 	document.addEventListener('scroll', () => {
 		let scrollY = window.scrollY
 		if (scrollY > 450) {
